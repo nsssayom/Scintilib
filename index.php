@@ -1,24 +1,17 @@
 <?php
 
-    include_once($_SERVER['DOCUMENT_ROOT'] . '/blood_mates/functions/init_database.php');
+    include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/functions/init_database.php');
+    include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/functions/validator.php');
 
-    if (isset($_POST['request']) && !empty($_POST['request'])){
-        $request = $_POST['request'];
+    $database = init_database();
+    $database->connect();
+    /*
 
-        $req_arr = json_decode($request, true);
-        foreach ($req_arr as $key => $value){
-            echo $key . "|" . $value;
-        }
+    $sql = "INSERT INTO token (user_id, token) VALUES ('14', '1013')";
+    //$sql = "SELECT * FROM token";
+    //print_r ($database->query($sql));
+    $database->query($sql)
+    */
 
-
-        //$database = init_database();
-        //$database->connect();
-
-        //$database->query("INSERT INTO mates (phone_number, access_token)values ('+8801717018376', 'token1')");
-    }
-
-    echo "received \n   - Server";
-
-
-
-?>
+    $name = $_GET['name'];
+    print_r(validate_username($name, $database));

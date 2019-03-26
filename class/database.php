@@ -1,9 +1,9 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'] . '/blood_mates/functions/response.php');
+include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/functions/response.php');
 
 class Database
 {
-    protected $link;
+    private $link;
     protected $hostname;
     protected $username;
     protected $password;
@@ -23,10 +23,12 @@ class Database
         /* Connect To MySQL */
         $mysql = new mysqli($this->hostname, $this->username, $this->password, $this->database);
         if ($mysql->connect_error) {
-            $data = array();
+             $data = array();
             $data['status'] = "400";
             $result = json_encode(array($data));
             print_r($result);
+
+            //echo $mysql->connect_error;
             return false;
         } else {
             $this->link = $mysql;
@@ -38,13 +40,13 @@ class Database
     {
         /* Returns MySQL Query */
         //for handling database error
-        $result = $this->link->query($sql) or response_database_error();          // $result = false;
+        $result = $this->link->query($sql) or response_database_error();
         return $result;
     }
 
     function escape($data)
     {
-        // Escape String
+        // Escape String to avoid SQL injection attack
         return $this->link->real_escape_string($data);
     }
 
@@ -78,9 +80,12 @@ class Database
 
     function getLink()
     {
-        return $this->link;
+        if(!self::$link)
+        {
+            self::$link = new connect();
+        }
+
+        return self::$link;
     }
 
 }
-
-?>

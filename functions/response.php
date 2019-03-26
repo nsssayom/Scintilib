@@ -102,6 +102,14 @@ function response_invalid_user(){
     echo json_encode(array($data));
     exit();
 }
+
+function response_invalid_name(){
+    $data = array();
+    $data['status'] = "256";
+    echo json_encode(array($data));
+    exit();
+}
+
 function response_wrong_password(){
     $data = array();
     $data['status'] = "258";

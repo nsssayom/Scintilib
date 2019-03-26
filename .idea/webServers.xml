@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="487e09a0-d76c-44c3-8ae5-e1812c67bd22" name="scintilib.com" url="http://scintilib.com/unified_user_platform">
+        <fileTransfer host="scintilib.com" port="22" rootFolder="/var/www/html/unified_user_platform" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
