@@ -3,7 +3,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/functions/respo
 
 class Database
 {
-    private $link;
+    public $link;
     protected $hostname;
     protected $username;
     protected $password;
@@ -80,12 +80,7 @@ class Database
 
     function getLink()
     {
-        if(!self::$link)
-        {
-            self::$link = new connect();
-        }
-
-        return self::$link;
+        return $this->link;
     }
 
 }

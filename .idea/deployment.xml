@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="scintilib.com">
+  <component name="PublishConfigData" autoUpload="Always" serverName="scintilib.com" uploadOnCheckin="487e09a0-d76c-44c3-8ae5-e1812c67bd22">
     <serverData>
       <paths name="scintilib.com">
         <serverdata>
@@ -10,6 +10,7 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="scintilib.com" />
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
