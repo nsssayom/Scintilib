@@ -66,7 +66,7 @@
             }
         }
 
-        $query = "SELECT * FROM users WHERE phone = '$phone';";
+        $query = "SELECT phone FROM users WHERE phone = '$phone';";
         $phones = $database->getArray($query);
         if (isset($phones[0])) {
             response_phone_number_not_available();
@@ -89,7 +89,7 @@
         }
 
         if (!preg_match("/^[a-zA-Z]*$/",$username)){
-            response_invalid_name();
+            response_invalid_user();
         }
 
         $query = "SELECT * FROM users WHERE username = '$username';";

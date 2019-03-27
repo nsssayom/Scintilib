@@ -3,19 +3,17 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/functions/init_
 include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/functions/validator.php');
 include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/class/user.php');
 
-if (!isset($_POST['signup']) || empty($_POST['signup'])){
+if (!isset($_POST['login']) || empty($_POST['login']) ||
+    !isset($_POST['password']) || empty($_POST['password'])){
     response_invalid_request();
 }
-
-$request = $_POST['signup'];
 
 $database = init_database();
 $database->connect();
 $user = new user($database);
-$request = urldecode ($request);
-$data = json_decode($request, true);
 
-$user->registration($data);
+$login = $database->escape($_POST['login']);
+$password = $_POST['password'];
 
 
-//{"username":"sadat","name":"Sadat Jubayer","phone":"+8801717018378","email":"sadat@yahoo.com","gender":"0","dob":"1996-03-14","password":"1234"}
+$user->login($login, $password);

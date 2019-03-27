@@ -13,16 +13,21 @@ class user
     }
 
     public function registration(array $reg_data){
-        $username = $reg_data['username'];
-        $name = $reg_data['name'];
-        $phone = $reg_data['phone'];
-        $email = $reg_data['email'];
-        $gender = $reg_data['gender'];
-        $dob = $reg_data['dob'];
+        $username = $this->database_link->escape($reg_data['username']);
+        $name = $this->database_link->escape( $reg_data['name']);
+        $phone = $this->database_link->escape($reg_data['phone']);
+        $email = $this->database_link->escape($reg_data['email']);
+        $gender = $this->database_link->escape($reg_data['gender']);
+        $dob = $this->database_link->escape($reg_data['dob']);
         //$user_level = $reg_data['user_level'];
         $password = $reg_data['password'];
 
         $hash_pwd =  process_password($password);
+
+        validate_name($name,true);
+        validate_username($username, $this->database_link, true);
+        validate_phone($phone, $this->database_link, true);
+        validate_email($email, $this->database_link, true);
 
         $sql = "INSERT INTO users(username, name, phone, email, gender, dob, password) VALUES 
                                   ('$username', '$name', '$phone', '$email', 
@@ -51,6 +56,36 @@ class user
             $this->database_link->query($sql);
             return $token;
         }
+    }
+
+    public function authenticate($token){
+        $sql = "SELECT id, user_id FROM token WHERE token = '$token'";
+        $user_id = $this->database_link->getArray($sql);
+        $token_id = $user_id[0]['id'];
+        if(isset($user_id[0])){
+            $sql = "UPDATE token SET revision = revision + 1 WHERE id = '$token_id';";
+            $this->database_link->query($sql);
+            return true;
+        }
+        return false;
+    }
+
+    public function login($login, $password){
+
+        $sql = "SELECT id, password FROM users WHERE email = '$login' OR username = '$login';";
+        $user = $this->database_link->getArray($sql);
+
+        if(!isset($user[0])){
+            response_invalid_user();
+        }
+
+        $hash_password = $user[0]['password'];
+        $user_id = $user[0]['id'];
+
+        if (password_verify($password, $hash_password)) {
+            response_token($this->get_token($user_id));
+        }
+        response_wrong_password();
     }
 
 }

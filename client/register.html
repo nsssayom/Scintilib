@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Webpage title</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>SIGN UP</h2>
+      <div class="form">
+        <input type="text" placeholder="Name" id="name" />
+        <input type="text" placeholder="username" id="username" />
+        <div class="failed" id="UserFailed">Username not available</div>
+        <div class="success" id="UserSucceed">Username available</div>
+        <input type="email" placeholder="Email" id="email" />
+        <div class="failed" id="EmailFailed">Email not available</div>
+        <div class="success" id="EmailSucceed">Email available</div>
+        <input type="text" placeholder="Password" id="pass" />
+        <input type="date" placeholder="Date" id="dob" />
+
+        <button id="submit">SignUp</button>
+        <a href="index.html"> <p>Already have an account? Login</p></a>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

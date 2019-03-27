@@ -9,4 +9,3 @@ function init_database(){
                              $dbConfig['database']);
     return $database;
 }
-?>
