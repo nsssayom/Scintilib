@@ -88,6 +88,10 @@
             response_invalid_user();
         }
 
+        if ($username == "self"){
+            response_invalid_user();
+        }
+
         if (!preg_match("/^[a-zA-Z]*$/",$username)){
             response_invalid_user();
         }

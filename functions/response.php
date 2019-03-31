@@ -24,6 +24,24 @@ function response_token($token){
     echo json_encode(array($data));
     exit();
 }
+
+function response_project($info){
+    $data = array();
+    $data ['status'] = "100";
+    $data ['projects'] = $info;
+    echo json_encode(array($data));
+    exit();
+}
+
+
+function response_user_info($info){
+    $data = array();
+    $data ['status'] = "100";
+    $data ['user_info'] = $info;
+    echo json_encode(array($data));
+    exit();
+}
+
 function response_token_update_failed(){
     $data = array();
     $data['status'] = "275";

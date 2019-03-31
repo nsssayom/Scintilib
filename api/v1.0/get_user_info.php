@@ -3,21 +3,21 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/functions/init_
 include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/functions/validator.php');
 include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/class/user.php');
 
-if (!isset($_POST['signup']) || empty($_POST['signup'])){
+if (!isset($_POST['token']) || empty($_POST['token'])){
     response_invalid_request();
 }
 
-$request = $_POST['signup'];
-
-//echo $request;
+$token = $_POST['token'];
 
 $database = init_database();
 $database->connect();
 $user = new user($database);
-$request = urldecode ($request);
-$data = json_decode($request, true);
+$token = $database->escape($token);
 
-$user->registration($data);
+if ($user->get_user_info($token)){
+    response_user_info();
+}
 
+response_invalid_token();
 
 //{"username":"sadat","name":"Sadat Jubayer","phone":"+8801717018378","email":"sadat@yahoo.com","gender":"0","dob":"1996-03-14","password":"1234"}

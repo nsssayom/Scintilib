@@ -23,6 +23,7 @@
 }
 
 .login-container .form input[type="text"],
+.login-container .form input[type="tel"],
 .login-container .form input[type="email"],
 .login-container .form input[type="date"],
 .login-container .form input[type="password"],
@@ -37,6 +38,7 @@
 }
 
 .login-container .form input[type="text"],
+.login-container .form input[type="tel"],
 .login-container .form input[type="email"],
 .login-container .form input[type="date"],
 .login-container .form input[type="password"] {
@@ -46,6 +48,7 @@
 }
 
 .login-container .form input[type="text"]:focus,
+.login-container .form input[type="tel"]:focus,
 .login-container .form input[type="email"]:focus,
 .login-container .form input[type="date"]:focus,
 .login-container .form input[type="password"]:focus {

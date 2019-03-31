@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="main.js"></script>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+
+        input[type=text], input[type=date], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=button] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            width: 75%;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-left: 12.5%;
+        }
+
+
+        .failed {
+            display: none;
+            margin-left: 40px;
+            margin-bottom: 10px;
+            color: red;
+        }
+
+        .success {
+            display: none;
+            margin-left: 40px;
+            margin-bottom: 10px;
+            color: green;
+        }
+
+        .main{
+            max-width: 1000px;
+        }
+    </style>
+</head>
+<body class="main">
+
+
+<div class="topnav">
+    <a href="home.html">Portfolio</a>
+    <a class="active"href="add_project.html">Add Project</a>
+    <a onclick="logout()">Log out</a>
+</div>
+
+
+
+<div class="container">
+    <h3>Add Project</h3>
+    <form action="/action_page.php">
+        <label for="project_name">Project Name:</label>
+        <input type="text" id="project_name" name="project_name" placeholder=" Your Project Name...">
+
+        <label for="thumbnail">Thumbnail</label>
+        <input type="text" id="thumbnail" name="thumbnail" placeholder="Your Project Thumbnail...">
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" placeholder="Short Description for your Project..." style="height:100px" ></textarea>
+
+        <label for="technology">Technologies</label>
+        <input type="text" id="technology" name="technology" placeholder="Technologies used...">
+
+        <label for="start_date">Start Date</label>
+        <input type="date" id="start_date" name="start_date">
+
+        <label for="end_date">End Date</label>
+        <input type="date" id="end_date" name="end_date"></form><br>
+
+        <label for="git">Repository Address</label>
+        <input type="text" id="git" name="git" placeholder="GitHub or Bitbicket Repository link">
+
+        <div class="failed" id="ProjectFailed">Project Upload Failed</div>
+        <div class="success" id="ProjectSuccess">Project Upload Successful</div>
+        <input type="button" onclick="add_project()" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

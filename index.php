@@ -3,11 +3,13 @@
 include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/functions/init_database.php');
 include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/functions/validator.php');
 include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/class/user.php');
+include_once($_SERVER['DOCUMENT_ROOT'] . '/unified_user_platform/class/project.php');
 
 $database = init_database();
 $database->connect();
 
 $user = new user($database);
+$project = new project($database);
 //$sql = "INSERT INTO token (user_id, token) VALUES ('14', '1013')";
 //$sql = "SELECT * FROM token";
 //print_r ($database->query($sql));
@@ -36,4 +38,5 @@ echo json_encode($data);
 
 //var_dump($user->get_token(5));
 
-$user->login("jamil@yahoo.com", "1234");
+//$user->login("jamil@yahoo.com", "1234");
+$project->get_projects("1");

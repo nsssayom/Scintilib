@@ -58,16 +58,38 @@ class user
         }
     }
 
+    public function get_user_id($username){
+        $sql = "SELECT id FROM users WHERE username = '$username'";
+        $user_id = $this->database_link->getArray($sql);
+
+        if(isset($user_id[0])){
+            $id = $user_id[0]['id'];
+            return $id;
+        }
+        return false;
+
+    }
+
     public function authenticate($token){
         $sql = "SELECT id, user_id FROM token WHERE token = '$token'";
         $user_id = $this->database_link->getArray($sql);
-        $token_id = $user_id[0]['id'];
+
         if(isset($user_id[0])){
+            $token_id = $user_id[0]['id'];
+            $id = $user_id[0]['user_id'];
             $sql = "UPDATE token SET revision = revision + 1 WHERE id = '$token_id';";
             $this->database_link->query($sql);
-            return true;
+            return $id;
         }
+        response_invalid_token();
         return false;
+    }
+
+    public function get_user_info($token){
+        $user_id = $this->authenticate($token);
+        $sql = "SELECT name, username FROM users WHERE id = '$user_id'";
+        $user_info = $this->database_link->getArray($sql);
+        response_user_info($user_info);
     }
 
     public function login($login, $password){
