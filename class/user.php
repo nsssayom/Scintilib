@@ -19,7 +19,7 @@ class user
         $email = $this->database_link->escape($reg_data['email']);
         $gender = $this->database_link->escape($reg_data['gender']);
         $dob = $this->database_link->escape($reg_data['dob']);
-        //$user_level = $reg_data['user_level'];
+        $user_level = $this->database_link->escape($reg_data['user_level']);
         $password = $reg_data['password'];
 
         $hash_pwd =  process_password($password);
@@ -29,9 +29,9 @@ class user
         validate_phone($phone, $this->database_link, true);
         validate_email($email, $this->database_link, true);
 
-        $sql = "INSERT INTO users(username, name, phone, email, gender, dob, password) VALUES 
+        $sql = "INSERT INTO users(username, name, phone, email, gender, dob, password, user_level) VALUES 
                                   ('$username', '$name', '$phone', '$email', 
-                                  '$gender', '$dob', '$hash_pwd')";
+                                  '$gender', '$dob', '$hash_pwd', '$user_level')";
         if ($this->database_link->query($sql)=== true){
             $user_id = $this->database_link->getLink()->insert_id;
             response_token($this->get_token($user_id));
@@ -69,7 +69,7 @@ class user
         return false;
 
     }
-
+    
     public function authenticate($token){
         $sql = "SELECT id, user_id FROM token WHERE token = '$token'";
         $user_id = $this->database_link->getArray($sql);
