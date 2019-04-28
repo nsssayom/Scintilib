@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Webpage Title -->
+    <title>ScintiLib - Online Book Booking Library</title>
+
+    <!-- Bootstrap CSS Main File  -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+
+    <!-- font Awesome -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+        crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">ScintiLib</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline my-sm-0">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for Books">
+                        <div class="input-group-prepend">
+                            <button class="input-group-text" id="btnGroupAddon"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+
+
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mr-2">
+                        <a class="nav-link" href="pages/ownLibrary..html"> My Profile <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active mr-4">
+                        <a class="nav-link" href="pages/ownLibrary..html"> My Library <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button type="button" class="btn btn-primary mr-1" data-toggle="modal" data-target="pages/login.html"
+                        data-whatever="@mdo">LogIn</button>
+                    <button type="button" class="btn btn-success ml-2" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="@mdo">Sign Up</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nav bar Ends here -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Log In to Your ScintiLib Account!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Username or Email:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" id="recipient-name">
+                        </div>
+                        .<div class="form-group text-center">
+                            <button type="button" class="btn btn-primary d-inline-block">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- login and Sign Up modal -->
+
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="w-100"></div>
+        </div>
+        <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                <div class="carousel-item col-md-3 active">
+                    <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400/000/fff?text=1" alt="slide 1">
+                </div>
+                <div class="carousel-item col-md-3">
+                    <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=2" alt="slide 2">
+                </div>
+                <div class="carousel-item col-md-3">
+                    <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=3" alt="slide 3">
+                </div>
+                <div class="carousel-item col-md-3">
+                    <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=4" alt="slide 4">
+                </div>
+                <div class="carousel-item col-md-3">
+                    <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=5" alt="slide 5">
+                </div>
+                <div class="carousel-item col-md-3">
+                    <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=6" alt="slide 6">
+                </div>
+                <div class="carousel-item col-md-3">
+                    <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=7" alt="slide 7">
+                </div>
+                <div class="carousel-item col-md-3">
+                    <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=8" alt="slide 7">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <i class="fa fa-chevron-left fa-lg text-muted"></i>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+                <i class="fa fa-chevron-right fa-lg text-muted"></i>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript Files -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script> -->
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

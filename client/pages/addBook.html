@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Webpage Title -->
+    <title>ScintiLib - Online Book Booking Library</title>
+
+    <!-- Bootstrap CSS Main File  -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+
+    <!-- font Awesome -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">ScintiLib</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline my-sm-0">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for Books">
+                        <div class="input-group-prepend">
+                            <button class="input-group-text" id="btnGroupAddon"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+
+
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mr-2">
+                        <a class="nav-link" href="#"> My Profile <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active mr-4">
+                        <a class="nav-link" href="#"> My Library <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button type="button" class="btn btn-primary mr-1" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="@mdo">Request</button>
+                    <button type="button" class="btn btn-success ml-2" data-toggle="modal" data-target="#exampleModal" onclick="window.location='login.html';"
+                        data-whatever="@mdo">Sign Out</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nav bar Ends here -->
+
+    <div class="container mt-5">
+        <div class="row justify-content-around">
+            <div class="col-md-6 col-sm-12 col-lg-6 border border-success p-4">
+                    <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Book Title</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Book title" autofocus>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Author Name</label>
+                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Author Name">
+                                </div>
+                            </div>
+                           
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">Language</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">Category</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputZip">Edition</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+                            </div>
+                            <!--<div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Check me out
+                                    </label>
+                                </div>
+                            </div>-->
+                            
+                        </form>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" autofocus>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">State</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                Check me out
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+
+                <p href="" onclick="addBook()">Addd book</p>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <pre id="debug"> </pre>
+
+
+
+    <!-- Add Book Form Ends Here -->
+
+
+
+
+    <!-- Optional JavaScript Files -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script> -->
+
+
+    <script>
+        function addBook() {
+
+            bookTitle = 'Sadat as Tiiel'
+            bookAuthor = [
+                [
+                    'Sadat', 1
+                ],
+                [
+                    'Sayom', 0
+                ]
+            ]
+            bookGenre = 'Mobin'
+            bookPublisher = 'vugichigh'
+            bookTags = ['Mobin', 'Sayom', 'Onnkeu']
+
+            var book = [{
+                token: getCookie('token'),
+                title: bookTitle,
+                authors: bookAuthor,
+                genre: bookGenre,
+                publisher: bookPublisher,
+                tags: bookTags
+            }]
+
+
+            var bookJSON = JSON.stringify(book);
+
+            let req = `bookDetail=${bookJSON}`
+
+            console.log(bookJSON);
+
+
+            let url = 'http://27.147.181.30/LibraryDeCentral/api/add_book.php'
+
+
+            let res = reqResPOST(url, req, function (res) {
+
+
+                console.log(res);
+                document.getElementById('debug').innerHTML = res.responseText;
+
+
+            })
+        }
+
+
+
+        // Get cookie
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        // JSON Parser 
+
+        function jsonParse(data, response) {
+            let myArr = JSON.parse(data.responseText);
+            let test = myArr[0].token;
+            response(test);
+        }
+
+        // POST Function 
+        function reqResPOST(url, requestedData, responseData) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    responseData(this);
+                }
+            };
+            xhr.send(requestedData);
+        }
+    </script>
+
+
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

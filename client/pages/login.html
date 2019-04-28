@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Webpage Title -->
+    <title>ScintiLib - Online Book Booking Library</title>
+
+    <!-- Bootstrap CSS Main File  -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+
+    <!-- font Awesome -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+    <link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">ScintiLib</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline my-sm-0">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for Books">
+                        <div class="input-group-prepend">
+                            <button class="input-group-text" id="btnGroupAddon"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+
+
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mr-2">
+                        <a class="nav-link" href="#"> My Profile <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active mr-4">
+                        <a class="nav-link" href="#"> My Library <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button type="button" class="btn btn-primary mr-1" data-toggle="modal" data-target="#exampleModal" onclick="window.location='login.html';"
+                        data-whatever="@mdo">LogIn</button>
+                    <button type="button" class="btn btn-success ml-2" data-toggle="modal" data-target="#exampleModal" onclick="window.location='registration.html';"
+                        data-whatever="@mdo">Sign Up</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- login -->
+
+    <div class="form-body" class="container-fluid">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <div class="website-logo-inside">
+                            <a href="index.html">
+                                <div class="logo">
+                                    <img class="logo-size" src="images/logo-light.svg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <h3>Give your books away. <br>Get books you want.</h3>
+                        <p>Access to the most powerfull tool in the entire design and web industry.</p>
+                        <div class="page-links">
+                            <a href="#" class="active">Login</a><a href="registration.html">Signup</a>
+                        </div>
+                        <form action="">
+                            <input class="form-control" type="text" placeholder="Email or username" required id="username">
+                            <input class="form-control" type="password" placeholder="Password" required id="password">
+                            <div class="form-button">
+                                <a id="submit"  type="submit" class="ibtn" onclick="window.location='profile.html';">Login</a>
+                            </div>
+                        </form>
+                        <div class="other-links">
+                            <span>Or login with</span><a href="http://www.facebook.com">Facebook</a>
+                            <a href="http://www.google.com">Google</a>
+                            <a href="https://bd.linkedin.com">Linkedin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1 id="test"></h1>
+
+    <!-- Optional JavaScript Files -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script> -->
+
+
+
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+        function login() {
+            var user = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            let url = 'http://27.147.181.30/LibraryDeCentral/api/login.php'
+            let req = `user_login=${user}&password=${password}`
+
+            let res = reqResPOST(url, req, function (res) {
+
+                jsonParse(res, function (data) {
+
+                    setCookie('token', data, 7);
+                    console.log(getCookie('token'));
+
+                })
+            })
+        }
+
+
+
+        // Set cookie 
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        // Get cookie
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        // JSON Parser 
+
+        function jsonParse(data, response) {
+            let myArr = JSON.parse(data.responseText);
+            let test = myArr[0].token;
+            response(test);
+        }
+
+        // POST Function 
+        function reqResPOST(url, requestedData, responseData) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    responseData(this);
+                }
+            };
+            xhr.send(requestedData);
+        }
+    </script>
+
+
+</body>
+
+</html>

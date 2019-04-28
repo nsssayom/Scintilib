@@ -69,7 +69,7 @@ class user
         return false;
 
     }
-    
+
     public function authenticate($token){
         $sql = "SELECT id, user_id FROM token WHERE token = '$token'";
         $user_id = $this->database_link->getArray($sql);

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Webpage Title -->
+    <title>ScintiLib - My Profile</title>
+
+    <!-- Bootstrap CSS Main File  -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+
+    <!-- font Awesome -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">ScintiLib</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline my-sm-0">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for Books">
+                        <div class="input-group-prepend">
+                            <button class="input-group-text" id="btnGroupAddon"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+
+
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mr-2">
+                        <a class="nav-link" href="profile.html"> My Profile <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active mr-4">
+                        <a class="nav-link" href="ownLibrary.html"> My Library <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active mr-4">
+                        <a class="nav-link" href="addBook.html"> Add Book<span class="sr-only">(current)</span></a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button type="button" class="btn btn-primary mr-1" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="@mdo">Request</button>
+                        <!--<a class="nav-link" href=""> My Library <span class="sr-only">(current)</span></a>-->
+                    <button type="button" class="btn btn-success ml-2" data-toggle="modal" data-target="#exampleModal" onclick="window.location='login.html';"
+                        data-whatever="@mdo">Sign Out</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Own Libaray -->
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center border-bottom border-primary p-2">
+                    My Profile
+                </h3>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4 border p-2">
+
+
+                    <div class="profile-userpic">
+                        <img src="../img/2017-12-18-15-34-12-618.jpg" class="img-responsive" alt="">
+                    </div>
+                    <!-- SIDEBAR USER TITLE -->
+                    <div class="profile-usertitle">
+                        <div class="profile-usertitle-name">
+                            <strong>Sadat Jubayer</strong>
+                        </div>
+
+                    </div>
+                    <table class="table border-bottom mt-2">
+                        <tbody>
+                            <tr>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-8">
+
+                    <h1 class="lead">My List</h1>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <!--<img class="card-img-top" src="../img/2017-12-18-15-34-12-618.jpg" alt="Card image cap">-->
+                                <button class="btn btn-primary m-2">Details</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <!--<img class="card-img-top" src="../img/2017-12-18-15-34-12-618.jpg" alt="Card image cap">-->
+                                <button class="btn btn-primary m-2">Details</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <!--<img class="card-img-top" src="../img/2017-12-18-15-34-12-618.jpg" alt="Card image cap">-->
+                                <button class="btn btn-primary m-2">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript Files -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script> -->
+
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
